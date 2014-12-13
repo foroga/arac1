@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @unit.group_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @unit.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @unit.email %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @unit.telefone %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @unit.active %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @unit.note %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @unit.account_id %>
+</p>
+
+<%= link_to 'Edit', edit_unit_path(@unit) %> |
+<%= link_to 'Back', units_path %>

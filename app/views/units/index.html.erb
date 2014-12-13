@@ -1,0 +1,37 @@
+<h1>Listing units</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Group</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Telefone</th>
+      <th>Active</th>
+      <th>Note</th>
+      <th>Account</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @units.each do |unit| %>
+      <tr>
+        <td><%= unit.group_id %></td>
+        <td><%= unit.name %></td>
+        <td><%= unit.email %></td>
+        <td><%= unit.telefone %></td>
+        <td><%= unit.active %></td>
+        <td><%= unit.note %></td>
+        <td><%= unit.account_id %></td>
+        <td><%= link_to 'Show', unit %></td>
+        <td><%= link_to 'Edit', edit_unit_path(unit) %></td>
+        <td><%= link_to 'Destroy', unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Unit', new_unit_path %>

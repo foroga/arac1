@@ -1,0 +1,17 @@
+<%= simple_form_for(@unit) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :group_id %>
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.input :telefone %>
+    <%= f.input :active %>
+    <%= f.input :note %>
+    <%= f.input :account_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
