@@ -27,8 +27,8 @@ test:
   reconnect: false
   database: arac1_test
   pool: 5
-  username: arac1
-  password: arac2014
+  username: <%= ENV["DATABASE_USERNAME"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
   host: localhost
 
 production:
@@ -37,6 +37,6 @@ production:
   reconnect: false
   database: arac1_production
   pool: 5
-  username: arac1
-  password: arac2014
+  username: <%= ENV["DATABASE_USERNAME"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
   host: localhost
