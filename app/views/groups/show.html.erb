@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @group.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @group.email %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @group.telefone %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @group.active %>
+</p>
+
+<p>
+  <strong>Dealtype:</strong>
+  <%= @group.dealtype %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @group.note %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @group.address %>
+</p>
+
+<p>
+  <strong>Error unit:</strong>
+  <%= @group.error_unit_id %>
+</p>
+
+<p>
+  <strong>Acounting unit:</strong>
+  <%= @group.acounting_unit_id %>
+</p>
+
+<p>
+  <strong>Bill unit:</strong>
+  <%= @group.bill_unit_id %>
+</p>
+
+<p>
+  <strong>Sw unit:</strong>
+  <%= @group.sw_unit_id %>
+</p>
+
+<p>
+  <strong>Acount:</strong>
+  <%= @group.acount_id %>
+</p>
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>
