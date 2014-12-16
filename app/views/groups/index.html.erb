@@ -29,11 +29,12 @@
         <td><%= group.dealtype %></td>
         <td><%= group.note %></td>
         <td><%= group.address %></td>
-        <td><%= group.error_unit_id %></td>
-        <td><%= group.acounting_unit_id %></td>
-        <td><%= group.bill_unit_id %></td>
-        <td><%= group.sw_unit_id %></td>
+        <td><%= @units.find(group.error_unit_id).name %></td>
+        <td><%= @units.find(group.acounting_unit_id).name %></td>
+        <td><%= @units.find(group.bill_unit_id).name %></td>
+        <td><%= @units.find(group.sw_unit_id).name %></td>
         <td><%= group.acount_id %></td>
+        <td><%= link_to 'Units', units_path(:group_id => group.id)  %></td>
         <td><%= link_to 'Show', group %></td>
         <td><%= link_to 'Edit', edit_group_path(group) %></td>
         <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -9,11 +9,21 @@
     <%= f.input :dealtype %>
     <%= f.input :note %>
     <%= f.input :address %>
-    <%= f.input :error_unit_id %>
-    <%= f.input :acounting_unit_id %>
-    <%= f.input :bill_unit_id %>
-    <%= f.input :sw_unit_id %>
+    <br>
+    <%= f.label 'Reponsables:' %>
+    <br>
+    <%= f.label :error_unit_id %>
+    <%= f.select(:error_unit_id, @units.map {|s| [s.name, s.id]}) %>
+    <%= f.label :acounting_unit_id %>
+    <%= f.select(:acounting_unit_id, @units.map {|s| [s.name, s.id]}) %>
+    <%= f.label :bill_unit_id %>
+    <%= f.select(:bill_unit_id, @units.map {|s| [s.name, s.id]}) %>
+    <%= f.label :sw_unit_id %>
+    <%= f.select(:sw_unit_id, @units.map {|s| [s.name, s.id]}) %>
+    <br><br>
     <%= f.input :acount_id %>
+  </div>
+
   </div>
 
   <div class="form-actions">
