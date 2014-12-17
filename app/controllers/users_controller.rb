@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   after_action :verify_authorized
 
   def index
+		@units = Unit.all
     @users = User.all
     authorize User
   end
@@ -32,7 +33,7 @@ class UsersController < ApplicationController
   private
 
   def secure_params
-    params.require(:user).permit(:role)
+    params.require(:user).permit(:role, :unit_id)
   end
 
 end

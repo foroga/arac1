@@ -24,6 +24,7 @@
         <td><%= unit.active %></td>
         <td><%= unit.note %></td>
         <td><%= unit.account_id %></td>
+        <td><%= link_to 'Users', users_path(:unit_id => unit.id) %></td>
         <td><%= link_to 'Show', unit %></td>
         <td><%= link_to 'Edit', edit_unit_path(unit) %></td>
         <td><%= link_to 'Destroy', unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
