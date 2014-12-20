@@ -1,13 +1,15 @@
-<td>
-  <%= link_to user.email, user %>
+<td> <%= user.unit_id %> </td>
+<td> <%= user.name %> </td>
+<td> <%= user.surname %> </td>
+<td> <%= user.email %> </td>
+<td> <%= user.telephone %> </td>
+<td> <%= user.active %> </td>
+<td> <%= user.note %> </td>
+<td> <%= user.role %> </td>
+<td> <%= user.unit_id %> </td>
+<td> <%= link_to "Edit", edit_user_path(user), :class => 'button-xs' %>
+<td> <%= link_to "Show", user, :class => 'button-xs' %>
+<td> <%= link_to("Delete", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button-xs') unless user == current_user %>
 </td>
-<td>
-  <%= form_for(user) do |f| %>
-    <%= f.select(:role, User.roles.keys.map {|role| [role.titleize,role]}) %>
-    <%= f.select(:unit_id, @units.map {|s| [s.name, s.id]}) %>
-    <%= f.submit 'Change Role', :class => 'button-xs' %>
-  <% end %>
-</td>
-<td>
-  <%= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button-xs') unless user == current_user %>
-</td>
+
+

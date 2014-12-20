@@ -4,7 +4,7 @@ class CreateUnits < ActiveRecord::Migration
       t.integer :group_id
       t.string :name
       t.string :email
-      t.integer :telefone
+      t.integer :telephone
       t.boolean :active
       t.string :note
       t.integer :account_id

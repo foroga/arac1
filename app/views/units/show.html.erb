@@ -16,8 +16,8 @@
 </p>
 
 <p>
-  <strong>Telefone:</strong>
-  <%= @unit.telefone %>
+  <strong>Telephone:</strong>
+  <%= @unit.telephone %>
 </p>
 
 <p>
@@ -35,5 +35,5 @@
   <%= @unit.account_id %>
 </p>
 
-<%= link_to 'Edit', edit_unit_path(@unit) %> |
-<%= link_to 'Back', units_path %>
+<%= link_to 'Edit', edit_unit_path(@unit), :class => 'button-xs' %> |
+<%= link_to 'Back', units_path, :class => 'button-xs' %>

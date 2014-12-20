@@ -3,7 +3,7 @@ class CreateGroups < ActiveRecord::Migration
     create_table :groups do |t|
       t.string :name
       t.string :email
-      t.integer :telefone
+      t.integer :telephone
       t.boolean :active
       t.string :dealtype
       t.string :note

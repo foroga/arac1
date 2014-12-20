@@ -1,17 +1,19 @@
-<%= simple_form_for(@unit) do |f| %>
+<%= simple_form_for(@user) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :group_id %>
+    <%= f.input :unit_id %>
     <%= f.input :name %>
+    <%= f.input :surname %>
     <%= f.input :email %>
     <%= f.input :telephone %>
     <%= f.input :active %>
     <%= f.input :note %>
-    <%= f.input :account_id %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, :class => 'button-xs' %>
   </div>
 <% end %>
+
+

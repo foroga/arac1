@@ -1,48 +1,53 @@
-<h1>Listing groups</h1>
+<div class="container">
+  <div class="row">
+		<h3>Groups</h3>
+    <div class="column">
+      <table class="table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Email</th>
+						<th>telephone</th>
+						<th>Active</th>
+						<th>Dealtype</th>
+						<th>Note</th>
+						<th>Address</th>
+						<th>Error unit</th>
+						<th>Acounting unit</th>
+						<th>Bill unit</th>
+						<th>Sw unit</th>
+						<th>Acount</th>
+						<th colspan="3"></th>
+					</tr>
+				</thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Telefone</th>
-      <th>Active</th>
-      <th>Dealtype</th>
-      <th>Note</th>
-      <th>Address</th>
-      <th>Error unit</th>
-      <th>Acounting unit</th>
-      <th>Bill unit</th>
-      <th>Sw unit</th>
-      <th>Acount</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+				<tbody>
+					<% @groups.each do |group| %>
+						<tr>
+						  <td><%= group.name %></td>
+						  <td><%= group.email %></td>
+						  <td><%= group.telephone %></td>
+						  <td><%= group.active %></td>
+						  <td><%= group.dealtype %></td>
+						  <td><%= group.note %></td>
+						  <td><%= group.address %></td>
+						  <td><%= @units.find(group.error_unit_id).name %></td>
+						  <td><%= @units.find(group.acounting_unit_id).name %></td>
+						  <td><%= @units.find(group.bill_unit_id).name %></td>
+						  <td><%= @units.find(group.sw_unit_id).name %></td>
+						  <td><%= group.acount_id %></td>
+						  <td><%= link_to 'Units', units_path(:group_id => group.id), :class => 'button-xs'  %></td>
+						  <td><%= link_to 'Show', group, :class => 'button-xs' %></td>
+						  <td><%= link_to 'Edit', edit_group_path(group), :class => 'button-xs' %></td>
+						  <td><%= link_to 'Destroy', group, :class => 'button-xs', method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
-  <tbody>
-    <% @groups.each do |group| %>
-      <tr>
-        <td><%= group.name %></td>
-        <td><%= group.email %></td>
-        <td><%= group.telefone %></td>
-        <td><%= group.active %></td>
-        <td><%= group.dealtype %></td>
-        <td><%= group.note %></td>
-        <td><%= group.address %></td>
-        <td><%= @units.find(group.error_unit_id).name %></td>
-        <td><%= @units.find(group.acounting_unit_id).name %></td>
-        <td><%= @units.find(group.bill_unit_id).name %></td>
-        <td><%= @units.find(group.sw_unit_id).name %></td>
-        <td><%= group.acount_id %></td>
-        <td><%= link_to 'Units', units_path(:group_id => group.id)  %></td>
-        <td><%= link_to 'Show', group %></td>
-        <td><%= link_to 'Edit', edit_group_path(group) %></td>
-        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+						</tr>
+					<% end %>
+        </tbody>
+				<tr></tr>
+      </table>
+    </div>
+  </div>
+	<td>	<%= link_to 'New Group', new_group_path %> </td>
+</div>
 
-<br>
-
-<%= link_to 'New Group', new_group_path %>

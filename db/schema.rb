@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20141217230143) do
   create_table "groups", force: true do |t|
     t.string   "name"
     t.string   "email"
-    t.integer  "telefone"
+    t.integer  "telephone"
     t.boolean  "active"
     t.string   "dealtype"
     t.string   "note"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20141217230143) do
     t.integer  "group_id"
     t.string   "name"
     t.string   "email"
-    t.integer  "telefone"
+    t.integer  "telephone"
     t.boolean  "active"
     t.string   "note"
     t.integer  "account_id"
@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 20141217230143) do
     t.integer  "invitations_count",      default: 0
     t.integer  "unit_id"
     t.string   "surname"
-    t.integer  "telefone"
+    t.integer  "telephone"
     t.boolean  "active"
     t.string   "note"
   end

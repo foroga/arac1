@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   belongs_to :unit
+	scope :active, lambda { where(:active => true) }
 
   enum role: [:user, :vip, :admin]
   after_initialize :set_default_role, :if => :new_record?

@@ -1,3 +1,10 @@
 <h3>User</h3>
-<p>Name: <%= @user.name if @user.name %></p>
-<p>Email: <%= @user.email if @user.email %></p>
+<p>Name: <%= @user.name  %></p>
+<p>Surname: <%= @user.email  %></p>
+<p>Active: <%= @user.active %></p>
+<p>Unit: <%= @user.unit_id if @user.unit_id %></p>
+<p>Telephone: <%= @user.telephone if @user.telephone %></p>
+<p>Note: <%= @user.note if @user.note %></p>
+<p>Role: <%= @user.role if @user.role %></p>
+<%= link_to 'Edit', edit_user_path(@user), :class => 'button-xs' %> |
+<%= link_to 'Back', users_path, :class => 'button-xs' %>

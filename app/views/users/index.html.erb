@@ -3,6 +3,19 @@
     <h3>Users</h3>
     <div class="column">
       <table class="table">
+				<thead>
+					<tr>
+						<th>Unit</th>
+						<th>Name</th>
+						<th>Surname</th>
+						<th>Email</th>
+						<th>Telephone</th>
+						<th>Active</th>
+						<th>Note</th>
+						<th>Role</th>
+						<th>UnitName</th>
+					</tr>
+				</thead>
         <tbody>
           <% @users.each do |user| %>
             <tr>
@@ -10,6 +23,7 @@
             </tr>
           <% end %>
         </tbody>
+				<tr></tr>
       </table>
     </div>
   </div>

@@ -1,11 +1,16 @@
-<% if user_signed_in? %>
-  <h3> Welcome <%= current_user.name %></h3>
-  <% if current_user.admin? %>
-    <p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
-    <p><%= link_to 'Units:', units_path %> <%= Unit.active.count %> active</p>
-    <p><%= link_to 'Groups:', groups_path %> <%= Group.active.count %> living</p>
-  <% end %>
-<% else %>
-  <h3>Welcome </h3>
-<% end %>
-
+<div class="container">
+	<% if user_signed_in? %>
+		<h3> Welcome <%= link_to current_user.name, user_path(current_user) %></h3>
+		<% if current_user.admin? %>
+			<p>Admin area</p>
+		  <p><%= link_to 'Users:', users_path %> 
+         <%= User.count %> registered 
+         <%= User.active.count %> active
+      </p>
+		  <p><%= link_to 'Units:', units_path %> <%= Unit.active.count %> active</p>
+		  <p><%= link_to 'Groups:', groups_path %> <%= Group.active.count %> living</p>
+		<% end %>
+	<% else %>
+		<h3>Welcome </h3>
+	<% end %>
+</div>
