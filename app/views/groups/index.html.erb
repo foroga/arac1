@@ -23,7 +23,12 @@
 
 				<tbody>
 					<% @groups.each do |group| %>
-						<tr>
+						<% if group.active?
+								@cl='class=success' 
+						else
+								@cl='class=active' 
+						end%>
+						<tr <%=@cl%> >
 						  <td><%= group.name %></td>
 						  <td><%= group.email %></td>
 						  <td><%= group.telephone %></td>

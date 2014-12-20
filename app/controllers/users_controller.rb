@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def index
 		@units = Unit.all
-    @users = User.all
+    @users = User.sort
     authorize User
   end
 

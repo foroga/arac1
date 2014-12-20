@@ -18,7 +18,12 @@
 				</thead>
         <tbody>
           <% @users.each do |user| %>
-            <tr>
+						<% if user.active?
+								@cl='class=success' 
+						else
+								@cl='class=active' 
+						end%>
+            <tr <%=@cl%>>
               <%= render user %>
             </tr>
           <% end %>

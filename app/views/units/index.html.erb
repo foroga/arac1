@@ -2,7 +2,7 @@
 	<div class="row">
 		<h1>Listing units</h1>
 		<div class="column">
-		  <table class="table">
+      <table class="table">
 				<thead>
 					<tr>
 						<th>Group</th>
@@ -17,7 +17,12 @@
 				</thead>
 				<tbody>
 					<% @units.each do |unit| %>
-						<tr>
+						<% if unit.active?
+								@cl='class=success' 
+						else
+								@cl='class=active' 
+						end%>
+						<tr <%=@cl%> >
 						  <td><%= Group.find(unit.group_id).name %></td>
 						  <td><%= unit.name %></td>
 						  <td><%= unit.email %></td>
