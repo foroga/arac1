@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :products
+
+  resources :suppliers
+
   resources :groups
 
   resources :units

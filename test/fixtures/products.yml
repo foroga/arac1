@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  supplier_id: 1
+  name: MyString
+  imageurl: MyString
+  active: false
+  note: MyString
+  minall: 9.99
+  mingroup: 9.99
+  minunit: 9.99
+  kgxunit: 9.99
+  unittype: MyString
+  price: 9.99
+  priceold: 9.99
+
+two:
+  supplier_id: 1
+  name: MyString
+  imageurl: MyString
+  active: false
+  note: MyString
+  minall: 9.99
+  mingroup: 9.99
+  minunit: 9.99
+  kgxunit: 9.99
+  unittype: MyString
+  price: 9.99
+  priceold: 9.99

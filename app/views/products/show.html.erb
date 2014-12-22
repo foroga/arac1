@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= Supplier.find(@product.supplier_id).name %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Imageurl:</strong>
+  <%= @product.imageurl %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @product.active %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @product.note %>
+</p>
+
+<p>
+  <strong>Minall:</strong>
+  <%= @product.minall %>
+</p>
+
+<p>
+  <strong>Mingroup:</strong>
+  <%= @product.mingroup %>
+</p>
+
+<p>
+  <strong>Minunit:</strong>
+  <%= @product.minunit %>
+</p>
+
+<p>
+  <strong>Kgxunit:</strong>
+  <%= @product.kgxunit %>
+</p>
+
+<p>
+  <strong>Unittype:</strong>
+  <%= @product.unittype %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+
+<p>
+  <strong>Priceold:</strong>
+  <%= @product.priceold %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product), :class => 'btn btn-default btn-xs' %>
+<%= link_to 'Back', products_path, :class => 'btn btn-default btn-xs' %>

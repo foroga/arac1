@@ -41,10 +41,10 @@
 						  <td><%= @units.find(group.bill_unit_id).name %></td>
 						  <td><%= @units.find(group.sw_unit_id).name %></td>
 						  <td><%= group.acount_id %></td>
-						  <td><%= link_to 'Units', units_path(:group_id => group.id), :class => 'button-xs'  %></td>
-						  <td><%= link_to 'Show', group, :class => 'button-xs' %></td>
-						  <td><%= link_to 'Edit', edit_group_path(group), :class => 'button-xs' %></td>
-						  <td><%= link_to 'Destroy', group, :class => 'button-xs', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+						  <td><%= link_to 'Units', units_path(:group_id => group.id), :class => 'btn btn-default btn-xs'  %></td>
+						  <td><%= link_to 'Show', group, :class => 'btn btn-default btn-xs' %></td>
+						  <td><%= link_to 'Edit', edit_group_path(group), :class => 'btn btn-default btn-xs' %></td>
+						  <td><%= link_to 'Destroy', group, :class => 'btn btn-default btn-xs', method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
 						</tr>
 					<% end %>

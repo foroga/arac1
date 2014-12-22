@@ -5,7 +5,11 @@ class UsersController < ApplicationController
 
   def index
 		@units = Unit.all
-    @users = User.sort
+		if params[:unit_id]
+			@users = Unit.find(params[:unit_id]).users
+		else
+	    @users = User.sort
+		end
     authorize User
   end
 
@@ -35,6 +39,10 @@ class UsersController < ApplicationController
   private
     def set_user
       @user = User.find(params[:id])
+    end
+
+    def set_unit
+      @unit = Unit.find(params[:unit_id])
     end
 
 		def secure_params

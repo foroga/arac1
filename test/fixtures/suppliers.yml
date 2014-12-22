@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  telephone: 1
+  url: MyString
+  active: false
+  note: MyString
+  frecuency: MyString
+  ranking: 1
+  account_id: 1
+  group_id: 1
+  watcher_unit_id: 1
+
+two:
+  name: MyString
+  email: MyString
+  telephone: 1
+  url: MyString
+  active: false
+  note: MyString
+  frecuency: MyString
+  ranking: 1
+  account_id: 1
+  group_id: 1
+  watcher_unit_id: 1

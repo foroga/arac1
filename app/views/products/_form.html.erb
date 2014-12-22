@@ -1,0 +1,23 @@
+<%= simple_form_for(@product) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+		<%= f.label 'Supplier' %>
+    <%= f.select(:supplier_id, Supplier.all.map {|s| [s.name, s.id]}, prompt: 'Select Group') %>
+    <%= f.input :name %>
+    <%= f.input :imageurl %>
+    <%= f.input :active %>
+    <%= f.input :note %>
+    <%= f.input :minall %>
+    <%= f.input :mingroup %>
+    <%= f.input :minunit %>
+    <%= f.input :kgxunit %>
+    <%= f.input :unittype %>
+    <%= f.input :price %>
+    <%= f.input :priceold %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit ,:class => 'btn btn-default btn-xs' %>
+  </div>
+<% end %>

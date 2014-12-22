@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141217230143) do
+ActiveRecord::Schema.define(version: 20141220230236) do
 
   create_table "groups", force: true do |t|
     t.string   "name"
@@ -26,6 +26,39 @@ ActiveRecord::Schema.define(version: 20141217230143) do
     t.integer  "bill_unit_id"
     t.integer  "sw_unit_id"
     t.integer  "acount_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products", force: true do |t|
+    t.integer  "supplier_id"
+    t.string   "name"
+    t.string   "imageurl"
+    t.boolean  "active"
+    t.string   "note"
+    t.decimal  "minall",      precision: 16, scale: 3
+    t.decimal  "mingroup",    precision: 16, scale: 3
+    t.decimal  "minunit",     precision: 16, scale: 3
+    t.decimal  "kgxunit",     precision: 16, scale: 3
+    t.string   "unittype"
+    t.decimal  "price",       precision: 16, scale: 3
+    t.decimal  "priceold",    precision: 16, scale: 3
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "suppliers", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.integer  "telephone"
+    t.string   "url"
+    t.boolean  "active"
+    t.string   "note"
+    t.string   "frecuency"
+    t.integer  "ranking"
+    t.integer  "account_id"
+    t.integer  "group_id"
+    t.integer  "watcher_unit_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

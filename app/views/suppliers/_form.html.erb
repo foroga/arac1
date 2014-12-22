@@ -1,0 +1,26 @@
+<%= simple_form_for(@supplier) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.input :telephone %>
+    <%= f.input :url %>
+    <%= f.input :active %>
+    <%= f.input :note %>
+    <%= f.input :frecuency %>
+    <%= f.input :ranking %>
+    <%= f.input :account_id %>
+    <%= f.label 'Manager' %><br>
+    <%= f.select(:group_id, Group.all.map {|s| [s.name, s.id]}, prompt: 'Select Group') %>
+		<br>
+    <%= f.select(:watcher_unit_id, 
+				Group.find(@supplier.group_id).units.map \
+					{|s| [s.name, s.id]}, prompt: 'Select Unit') if @supplier.group_id %>
+		<br><br>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn btn-default btn-xs' %>
+  </div>
+<% end %>

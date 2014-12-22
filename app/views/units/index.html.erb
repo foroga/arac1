@@ -30,10 +30,10 @@
 						  <td><%= unit.active %></td>
 						  <td><%= unit.note %></td>
 						  <td><%= unit.account_id %></td>
-						  <td><%= link_to 'Users', users_path(:unit_id => unit.id), :class => 'button-xs' %></td>
-						  <td><%= link_to 'Show', unit, :class => 'button-xs' %></td>
-						  <td><%= link_to 'Edit', edit_unit_path(unit), :class => 'button-xs' %></td>
-						  <td><%= link_to 'Destroy', unit, :class => 'button-xs', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+						  <td><%= link_to 'Users', users_path(:unit_id => unit.id), :class => 'btn btn-default btn-xs' %></td>
+						  <td><%= link_to 'Show', unit, :class => 'btn btn-default btn-xs' %></td>
+						  <td><%= link_to 'Edit', edit_unit_path(unit), :class => 'btn btn-default btn-xs' %></td>
+						  <td><%= link_to 'Destroy', unit, :class => 'btn btn-default btn-xs', method: :delete, data: { confirm: 'Are you sure?' } %></td>
 						</tr>
 					<% end %>
 		      </tbody>
