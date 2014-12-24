@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>State:</strong>
+  <%= @order.state %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @order.date %>
+</p>
+
+<p>
+  <strong>Requested:</strong>
+  <%= @order.requested %>
+</p>
+
+<p>
+  <strong>Received:</strong>
+  <%= @order.received %>
+</p>
+
+<p>
+  <strong>Priceini:</strong>
+  <%= @order.priceini %>
+</p>
+
+<p>
+  <strong>Priceend:</strong>
+  <%= @order.priceend %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

@@ -1,0 +1,16 @@
+<%= simple_form_for(@order) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :state %>
+    <%= f.input :date %>
+    <%= f.input :requested %>
+    <%= f.input :received %>
+    <%= f.input :priceini %>
+    <%= f.input :priceend %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

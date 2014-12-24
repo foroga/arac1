@@ -7,8 +7,8 @@ class UnitsController < ApplicationController
 
   def index
     authorize User
-		if @group
-			@units = @group.units
+		if params[:group_id]
+			@units = Group.find(params[:group_id]).units
 		else
 	    @units = Unit.all
 		end
@@ -22,7 +22,7 @@ class UnitsController < ApplicationController
 
   def new
     authorize User
-    @unit = Unit.new
+    @unit = Unit.new(:group_id=>params[:group_id])
     respond_with(@unit)
   end
 

@@ -10,6 +10,9 @@
 		  <p><%= link_to 'Groups:', groups_path %> <%= Group.active.count %> living</p>
 		  <p><%= link_to 'Products:', products_path %> <%= Product.active.count %> active</p>
 		  <p><%= link_to 'Supplier:', suppliers_path %> <%= Supplier.active.count %> living</p>
+		  <p><%= link_to 'Order:', orders_path %> <%= Order.count %> created </p>
+		  <p><%= link_to 'OrderSupplier', order_suppliers_path %> </p>
+		  <p><%= link_to 'Item', items_path %> </p>
 		<% end %>
 	<% else %>
 		<h3>Welcome </h3>

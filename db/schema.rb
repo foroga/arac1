@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141220230236) do
+ActiveRecord::Schema.define(version: 20141222225411) do
 
   create_table "groups", force: true do |t|
     t.string   "name"
@@ -26,6 +26,42 @@ ActiveRecord::Schema.define(version: 20141220230236) do
     t.integer  "bill_unit_id"
     t.integer  "sw_unit_id"
     t.integer  "acount_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "items", force: true do |t|
+    t.integer  "order_id"
+    t.integer  "product_id"
+    t.integer  "supplier_id"
+    t.string   "name"
+    t.string   "note"
+    t.decimal  "minall",      precision: 16, scale: 3
+    t.decimal  "mingroup",    precision: 16, scale: 3
+    t.decimal  "minunit",     precision: 16, scale: 3
+    t.decimal  "kgxunit",     precision: 16, scale: 3
+    t.string   "unittype"
+    t.decimal  "price",       precision: 16, scale: 3
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "order_suppliers", force: true do |t|
+    t.integer  "order_id"
+    t.integer  "supplier_id"
+    t.integer  "group_id"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "orders", force: true do |t|
+    t.string   "state"
+    t.datetime "date"
+    t.decimal  "requested",  precision: 16, scale: 3
+    t.decimal  "received",   precision: 16, scale: 3
+    t.decimal  "priceini",   precision: 16, scale: 3
+    t.decimal  "priceend",   precision: 16, scale: 3
     t.datetime "created_at"
     t.datetime "updated_at"
   end

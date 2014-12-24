@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  state: MyString
+  date: 2014-12-22 23:51:54
+  requested: 9.99
+  received: 9.99
+  priceini: 9.99
+  priceend: 9.99
+
+two:
+  state: MyString
+  date: 2014-12-22 23:51:54
+  requested: 9.99
+  received: 9.99
+  priceini: 9.99
+  priceend: 9.99

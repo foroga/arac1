@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @item.order_id %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @item.product_id %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @item.supplier_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @item.name %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @item.note %>
+</p>
+
+<p>
+  <strong>Minall:</strong>
+  <%= @item.minall %>
+</p>
+
+<p>
+  <strong>Mingroup:</strong>
+  <%= @item.mingroup %>
+</p>
+
+<p>
+  <strong>Minunit:</strong>
+  <%= @item.minunit %>
+</p>
+
+<p>
+  <strong>Kgxunit:</strong>
+  <%= @item.kgxunit %>
+</p>
+
+<p>
+  <strong>Unittype:</strong>
+  <%= @item.unittype %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @item.price %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

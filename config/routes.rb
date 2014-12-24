@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :items
+
+  resources :order_suppliers
+
+  resources :orders
+
   resources :products
 
   resources :suppliers
