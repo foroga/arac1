@@ -25,7 +25,7 @@
 				  <tr>
 				    <td><%= item.order_id %></td>
 				    <td><%= item.product_id %></td>
-				    <td><%= item.supplier_id %></td>
+				    <td><%= Supplier.find(item.supplier_id).name %></td>
 				    <td><%= item.name %></td>
 				    <td><%= item.note %></td>
 				    <td><%= item.minall %></td>

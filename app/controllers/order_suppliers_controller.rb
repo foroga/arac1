@@ -6,9 +6,9 @@ class OrderSuppliersController < ApplicationController
 
   def index
 		if @order
-			@order_suppliers = @order.order_suppliers
+			@order_suppliers = @order.order_suppliers.sort
 		else
-	    @order_suppliers = OrderSupplier.all
+	    @order_suppliers = OrderSupplier.sort
 		end
     respond_with(@order_suppliers)
   end

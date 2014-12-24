@@ -28,6 +28,11 @@
 						  <td><%= link_to 'Show', order, :class => 'btn btn-default btn-xs' %></td>
 						  <td><%= link_to 'Edit', edit_order_path(order), :class => 'btn btn-default btn-xs' %></td>
 						  <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-default btn-xs' %></td>
+
+						<% if order.state=='Open' %>
+						  <td><%= link_to 'Add products', { :id => order.id, :action => 'open' }, :class => 'btn btn-default btn-xs' %></td>
+						<% end %>
+
 						</tr>
 					<% end %>
 				</tbody>
