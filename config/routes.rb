@@ -13,9 +13,12 @@ Rails.application.routes.draw do
 
   resources :units
 
+  devise_for :users
+  resources :users
+
+  get '/orders/open/:id', to: 'orders#open'
+
 #  match ':controller(/:action(/:id))', :via => [ :get, :post] 
 
   root to: 'visitors#index'
-  devise_for :users
-  resources :users
 end

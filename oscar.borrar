@@ -1,0 +1,91 @@
+                  Prefix Verb   URI Pattern                         Controller#Action
+                   items GET    /items(.:format)                    items#index
+                         POST   /items(.:format)                    items#create
+                new_item GET    /items/new(.:format)                items#new
+               edit_item GET    /items/:id/edit(.:format)           items#edit
+                    item GET    /items/:id(.:format)                items#show
+                         PATCH  /items/:id(.:format)                items#update
+                         PUT    /items/:id(.:format)                items#update
+                         DELETE /items/:id(.:format)                items#destroy
+         order_suppliers GET    /order_suppliers(.:format)          order_suppliers#index
+                         POST   /order_suppliers(.:format)          order_suppliers#create
+      new_order_supplier GET    /order_suppliers/new(.:format)      order_suppliers#new
+     edit_order_supplier GET    /order_suppliers/:id/edit(.:format) order_suppliers#edit
+          order_supplier GET    /order_suppliers/:id(.:format)      order_suppliers#show
+                         PATCH  /order_suppliers/:id(.:format)      order_suppliers#update
+                         PUT    /order_suppliers/:id(.:format)      order_suppliers#update
+                         DELETE /order_suppliers/:id(.:format)      order_suppliers#destroy
+                  orders GET    /orders(.:format)                   orders#index
+                         POST   /orders(.:format)                   orders#create
+               new_order GET    /orders/new(.:format)               orders#new
+              edit_order GET    /orders/:id/edit(.:format)          orders#edit
+                   order GET    /orders/:id(.:format)               orders#show
+                         PATCH  /orders/:id(.:format)               orders#update
+                         PUT    /orders/:id(.:format)               orders#update
+                         DELETE /orders/:id(.:format)               orders#destroy
+                products GET    /products(.:format)                 products#index
+                         POST   /products(.:format)                 products#create
+             new_product GET    /products/new(.:format)             products#new
+            edit_product GET    /products/:id/edit(.:format)        products#edit
+                 product GET    /products/:id(.:format)             products#show
+                         PATCH  /products/:id(.:format)             products#update
+                         PUT    /products/:id(.:format)             products#update
+                         DELETE /products/:id(.:format)             products#destroy
+               suppliers GET    /suppliers(.:format)                suppliers#index
+                         POST   /suppliers(.:format)                suppliers#create
+            new_supplier GET    /suppliers/new(.:format)            suppliers#new
+           edit_supplier GET    /suppliers/:id/edit(.:format)       suppliers#edit
+                supplier GET    /suppliers/:id(.:format)            suppliers#show
+                         PATCH  /suppliers/:id(.:format)            suppliers#update
+                         PUT    /suppliers/:id(.:format)            suppliers#update
+                         DELETE /suppliers/:id(.:format)            suppliers#destroy
+                  groups GET    /groups(.:format)                   groups#index
+                         POST   /groups(.:format)                   groups#create
+               new_group GET    /groups/new(.:format)               groups#new
+              edit_group GET    /groups/:id/edit(.:format)          groups#edit
+                   group GET    /groups/:id(.:format)               groups#show
+                         PATCH  /groups/:id(.:format)               groups#update
+                         PUT    /groups/:id(.:format)               groups#update
+                         DELETE /groups/:id(.:format)               groups#destroy
+                   units GET    /units(.:format)                    units#index
+                         POST   /units(.:format)                    units#create
+                new_unit GET    /units/new(.:format)                units#new
+               edit_unit GET    /units/:id/edit(.:format)           units#edit
+                    unit GET    /units/:id(.:format)                units#show
+                         PATCH  /units/:id(.:format)                units#update
+                         PUT    /units/:id(.:format)                units#update
+                         DELETE /units/:id(.:format)                units#destroy
+        new_user_session GET    /users/sign_in(.:format)            devise/sessions#new
+            user_session POST   /users/sign_in(.:format)            devise/sessions#create
+    destroy_user_session DELETE /users/sign_out(.:format)           devise/sessions#destroy
+           user_password POST   /users/password(.:format)           devise/passwords#create
+       new_user_password GET    /users/password/new(.:format)       devise/passwords#new
+      edit_user_password GET    /users/password/edit(.:format)      devise/passwords#edit
+                         PATCH  /users/password(.:format)           devise/passwords#update
+                         PUT    /users/password(.:format)           devise/passwords#update
+cancel_user_registration GET    /users/cancel(.:format)             devise_invitable/registrations#cancel
+       user_registration POST   /users(.:format)                    devise_invitable/registrations#create
+   new_user_registration GET    /users/sign_up(.:format)            devise_invitable/registrations#new
+  edit_user_registration GET    /users/edit(.:format)               devise_invitable/registrations#edit
+                         PATCH  /users(.:format)                    devise_invitable/registrations#update
+                         PUT    /users(.:format)                    devise_invitable/registrations#update
+                         DELETE /users(.:format)                    devise_invitable/registrations#destroy
+       user_confirmation POST   /users/confirmation(.:format)       devise/confirmations#create
+   new_user_confirmation GET    /users/confirmation/new(.:format)   devise/confirmations#new
+                         GET    /users/confirmation(.:format)       devise/confirmations#show
+  accept_user_invitation GET    /users/invitation/accept(.:format)  devise/invitations#edit
+  remove_user_invitation GET    /users/invitation/remove(.:format)  devise/invitations#destroy
+         user_invitation POST   /users/invitation(.:format)         devise/invitations#create
+     new_user_invitation GET    /users/invitation/new(.:format)     devise/invitations#new
+                         PATCH  /users/invitation(.:format)         devise/invitations#update
+                         PUT    /users/invitation(.:format)         devise/invitations#update
+                   users GET    /users(.:format)                    users#index
+                         POST   /users(.:format)                    users#create
+                new_user GET    /users/new(.:format)                users#new
+               edit_user GET    /users/:id/edit(.:format)           users#edit
+                    user GET    /users/:id(.:format)                users#show
+                         PATCH  /users/:id(.:format)                users#update
+                         PUT    /users/:id(.:format)                users#update
+                         DELETE /users/:id(.:format)                users#destroy
+                         GET    /orders/open/:id(.:format)          orders#open
+                    root GET    /                                   visitors#index
