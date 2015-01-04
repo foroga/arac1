@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :units
 
-  match ':controller(/:action(/:id))', :via => [ :get, :post] 
+#  match ':controller(/:action(/:id))', :via => [ :get, :post] 
 
   root to: 'visitors#index'
   devise_for :users
