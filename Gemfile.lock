@@ -31,6 +31,8 @@ GEM
       activerecord (>= 3.0)
     arel (5.0.1.20140414130214)
     ast (2.4.0)
+    autoprefixer-rails (9.8.6)
+      execjs
     bcrypt (3.1.13)
     better_errors (2.0.0)
       coderay (>= 1.0.0)
@@ -162,7 +164,7 @@ GEM
     tilt (1.4.1)
     turbolinks (2.5.3)
       coffee-rails
-    tzinfo (1.2.5)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     uglifier (2.6.0)
       execjs (>= 0.3.0)
